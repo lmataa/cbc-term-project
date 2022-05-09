@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+    <org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/RobotArms/C0.bcc" org.eventb.core.source="/RobotArms/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.seesContext#("/>
+    <org.eventb.core.scInternalContext name="C0">
+        <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="n_arms∈ℕ1" org.eventb.core.source="/RobotArms/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="box_capacity∈ℕ1" org.eventb.core.source="/RobotArms/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="item_weights={x⦂ℤ·x∈1 ‥ box_capacity ∣ x}" org.eventb.core.source="/RobotArms/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#," org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="*" org.eventb.core.label="axm4" org.eventb.core.predicate="look_ahead∈ℕ1" org.eventb.core.source="/RobotArms/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#-" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scConstant name="box_capacity" org.eventb.core.source="/RobotArms/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#*" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.scConstant name="look_ahead" org.eventb.core.source="/RobotArms/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#." org.eventb.core.type="ℤ"/>
+        <org.eventb.core.scConstant name="item_weights" org.eventb.core.source="/RobotArms/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#0" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.scConstant name="n_arms" org.eventb.core.source="/RobotArms/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.scInternalContext>
+    <org.eventb.core.scInvariant name="C1" org.eventb.core.label="inv1" org.eventb.core.predicate="cur_box∈0 ‥ box_capacity" org.eventb.core.source="/RobotArms/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#\/" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scInvariant name="C2" org.eventb.core.label="inv2" org.eventb.core.predicate="arms∈1 ‥ n_arms ⇸ item_weights" org.eventb.core.source="/RobotArms/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#1" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scVariable name="arms" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/RobotArms/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#*" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+    <org.eventb.core.scVariable name="cur_box" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/RobotArms/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#." org.eventb.core.type="ℤ"/>
+    <org.eventb.core.scEvent name="cur_boy" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/RobotArms/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'">
+        <org.eventb.core.scAction name="'" org.eventb.core.assignment="cur_box ≔ 0" org.eventb.core.label="act1" org.eventb.core.source="/RobotArms/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'|org.eventb.core.action#'"/>
+        <org.eventb.core.scAction name="(" org.eventb.core.assignment="arms :∣ ⊤" org.eventb.core.label="GEN" org.eventb.core.source="/RobotArms/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
+    </org.eventb.core.scEvent>
+    <org.eventb.core.scEvent name="cur_boz" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="evt1" org.eventb.core.source="/RobotArms/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#0"/>
+</org.eventb.core.scMachineFile>

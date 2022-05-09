@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.comment="Factory context" org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+    <org.eventb.core.constant name="'" org.eventb.core.comment="Number of robotic arms in the system" org.eventb.core.identifier="n_arms"/>
+    <org.eventb.core.axiom name="(" org.eventb.core.comment="In principle it can be any NAT1" org.eventb.core.label="axm1" org.eventb.core.predicate="n_arms ∈ ℕ1 "/>
+    <org.eventb.core.axiom name=")" org.eventb.core.label="axm2" org.eventb.core.predicate="box_capacity ∈ ℕ1"/>
+    <org.eventb.core.constant name="*" org.eventb.core.comment="Maximum box weight capacity" org.eventb.core.identifier="box_capacity"/>
+    <org.eventb.core.axiom name="," org.eventb.core.label="axm3" org.eventb.core.predicate="item_weights = {x ∣ x ∈ 1‥box_capacity}"/>
+    <org.eventb.core.axiom name="-" org.eventb.core.comment="In principle it can be any NAT1" org.eventb.core.label="axm4" org.eventb.core.predicate="look_ahead ∈ ℕ1"/>
+    <org.eventb.core.constant name="." org.eventb.core.comment="Number of items the arms can access" org.eventb.core.identifier="look_ahead"/>
+    <org.eventb.core.constant name="0" org.eventb.core.comment="Range of weight values for the items" org.eventb.core.identifier="item_weights"/>
+</org.eventb.core.contextFile>
