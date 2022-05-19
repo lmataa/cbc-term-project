@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="box_capacity" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="look_ahead" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="item_weights" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="n_arms" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/RobotArms/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="n_arms∈ℕ1" org.eventb.core.source="/RobotArms/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="box_capacity∈ℕ1" org.eventb.core.source="/RobotArms/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#)"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="item_weights={x⦂ℤ·x∈1 ‥ box_capacity ∣ x}" org.eventb.core.source="/RobotArms/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#,"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="look_ahead∈ℕ1" org.eventb.core.source="/RobotArms/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#-"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
