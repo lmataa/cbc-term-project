@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<index_root>
+    <pim project="/RobotArmsProject">
+        <rodin_index>
+            <descriptor element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#." name="max_box_capacity">
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="31" loc_char_start="15"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#4|org.eventb.core.action#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="49" loc_char_start="33"/>
+                <occurrence element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#\/" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="35" loc_char_start="19"/>
+                <occurrence element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#." kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#0" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="16" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'|org.eventb.core.action#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="49" loc_char_start="33"/>
+            </descriptor>
+            <descriptor element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#4" name="REPLACE_BOX">
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#4" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            </descriptor>
+            <descriptor element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2" name="PICK_ITEM">
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            </descriptor>
+            <descriptor element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'" name="INITIALISATION">
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            </descriptor>
+            <descriptor element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.variable#)" name="arms">
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.variable#)" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="17" loc_char_start="13"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="4" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.action#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="4" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3|org.eventb.core.action#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="30" loc_char_start="26"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3|org.eventb.core.action#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="4" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#4|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="31" loc_char_start="27"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#4|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="47" loc_char_start="43"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3|org.eventb.core.guard#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="4" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="4" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="4" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.action#+" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="4" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="4" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="31" loc_char_start="27"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="47" loc_char_start="43"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="127" loc_char_start="123"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="231" loc_char_start="227"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="260" loc_char_start="256"/>
+            </descriptor>
+            <descriptor element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#(" name="max_item_weight">
+                <occurrence element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="15" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#(" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="194" loc_char_start="179"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.guard#-" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="31" loc_char_start="16"/>
+                <occurrence element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="15" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="35" loc_char_start="20"/>
+            </descriptor>
+            <descriptor element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.variable#\/" name="box_weight">
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#4|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="65" loc_char_start="55"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="10" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#1" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="10" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="10" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#0" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="10" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="65" loc_char_start="55"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.variable#\/" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="253" loc_char_start="243"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="10" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3|org.eventb.core.action#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="23" loc_char_start="13"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#4|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="10" loc_char_start="0"/>
+            </descriptor>
+            <descriptor element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0" name="M0">
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0" kind="org.eventb.core.declaration"/>
+            </descriptor>
+            <descriptor element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.parameter#," name="item_weight">
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.guard#-" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="11" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.action#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="28" loc_char_start="17"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.parameter#," kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+            </descriptor>
+            <descriptor element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3" name="PLACE_ITEM">
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            </descriptor>
+            <descriptor element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0" name="C0">
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.seesContext#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+                <occurrence element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0" kind="org.eventb.core.declaration"/>
+            </descriptor>
+            <descriptor element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#)" name="min_box_capacity">
+                <occurrence element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#-" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="16" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#\/" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="16" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'|org.eventb.core.action#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="32" loc_char_start="16"/>
+                <occurrence element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#)" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#." kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="16" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="34" loc_char_start="18"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#4|org.eventb.core.action#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="32" loc_char_start="16"/>
+            </descriptor>
+            <descriptor element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.parameter#)" name="free_arm">
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.parameter#)" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.action#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="13" loc_char_start="5"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.guard#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="13" loc_char_start="5"/>
+            </descriptor>
+            <descriptor element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3|org.eventb.core.parameter#(" name="arm">
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="21" loc_char_start="18"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3|org.eventb.core.action#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="8" loc_char_start="5"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3|org.eventb.core.action#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="34" loc_char_start="31"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3|org.eventb.core.guard#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="5"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3|org.eventb.core.guard#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3|org.eventb.core.parameter#(" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+            </descriptor>
+            <descriptor element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#'" name="n_arms">
+                <occurrence element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.guard#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="19" loc_char_start="13"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#4|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="24" loc_char_start="18"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="224" loc_char_start="218"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="119" loc_char_start="113"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="24" loc_char_start="18"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'|org.eventb.core.action#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="15" loc_char_start="9"/>
+                <occurrence element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="6" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3|org.eventb.core.guard#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="14" loc_char_start="8"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="15" loc_char_start="9"/>
+            </descriptor>
+            <descriptor element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.variable#*" name="box_capacity">
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="279" loc_char_start="267"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="80" loc_char_start="68"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#0" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="25" loc_char_start="13"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.variable#*" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#4|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#." kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="31" loc_char_start="19"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="37" loc_char_start="25"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#-" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#4|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="80" loc_char_start="68"/>
+            </descriptor>
+        </rodin_index>
+        <export_table>
+            <export file="/RobotArmsProject/M0.bum">
+                <exported element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#4" name="REPLACE_BOX"/>
+                <exported element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'" name="INITIALISATION"/>
+                <exported element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#)" name="min_box_capacity"/>
+                <exported element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3" name="PLACE_ITEM"/>
+                <exported element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2" name="PICK_ITEM"/>
+                <exported element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#(" name="max_item_weight"/>
+                <exported element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.parameter#)" name="free_arm"/>
+                <exported element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#3|org.eventb.core.parameter#(" name="arm"/>
+                <exported element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#." name="max_box_capacity"/>
+                <exported element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.variable#)" name="arms"/>
+                <exported element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.parameter#," name="item_weight"/>
+                <exported element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.variable#*" name="box_capacity"/>
+                <exported element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#'" name="n_arms"/>
+                <exported element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0" name="C0"/>
+                <exported element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.variable#\/" name="box_weight"/>
+                <exported element="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0" name="M0"/>
+            </export>
+            <export file="/RobotArmsProject/C0.buc">
+                <exported element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#." name="max_box_capacity"/>
+                <exported element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#'" name="n_arms"/>
+                <exported element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#)" name="min_box_capacity"/>
+                <exported element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0" name="C0"/>
+                <exported element="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#(" name="max_item_weight"/>
+            </export>
+        </export_table>
+        <graph is_sorted="true">
+            <node label="/RobotArmsProject/C0.buc" mark="false" order_pos="0"/>
+            <node label="/RobotArmsProject/M0.bum" mark="false" order_pos="1">
+                <predecessor label="/RobotArmsProject/C0.buc"/>
+            </node>
+        </graph>
+        <unprocessed file="/RobotArmsProject/C0.bcc"/>
+        <unprocessed file="/RobotArmsProject/C0.bpo"/>
+        <unprocessed file="/RobotArmsProject/C0.bpr"/>
+        <unprocessed file="/RobotArmsProject/C0.bps"/>
+        <unprocessed file="/RobotArmsProject/M0.bcm"/>
+        <unprocessed file="/RobotArmsProject/M0.bpo"/>
+        <unprocessed file="/RobotArmsProject/M0.bpr"/>
+        <unprocessed file="/RobotArmsProject/M0.bps"/>
+    </pim>
+    <delta_list/>
+    <indexer_registry>
+        <registry_entry element_type="org.eventb.core.machineFile">
+            <indexer id="machineIndexer"/>
+        </registry_entry>
+        <registry_entry element_type="org.eventb.core.contextFile">
+            <indexer id="contextIndexer"/>
+        </registry_entry>
+    </indexer_registry>
+</index_root>

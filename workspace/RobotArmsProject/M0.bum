@@ -31,9 +31,10 @@
         <org.eventb.core.action name=")" org.eventb.core.assignment="arms(arm) ≔ 0" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="*" org.eventb.core.assignment="box_weight ≔ box_weight + arms(arm)" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="REPLACE_BOX">
-        <org.eventb.core.guard name="'" org.eventb.core.comment="Falta" org.eventb.core.label="grd1" org.eventb.core.predicate="¬(∀ arm · arm ∈ 1‥n_arms ∧ (arms(arm) = 0 ∨ box_weight + arms(arm) &gt; box_capacity))"/>
+    <org.eventb.core.event name="4" org.eventb.core.comment="¬(∀ arm · arm ∈ 1‥n_arms ∧ (arms(arm) = 0 ∨ box_weight + arms(arm) &gt; box_capacity))" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="REPLACE_BOX">
+        <org.eventb.core.guard name="'" org.eventb.core.comment="Falta" org.eventb.core.label="grd1" org.eventb.core.predicate="¬ (∃arm · arm ∈ 1‥n_arms ∧ arms(arm) ≠ 0 ∧ arms(arm) + box_weight ≤ box_capacity)"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="box_capacity :∈ min_box_capacity‥max_box_capacity" org.eventb.core.label="act1"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="box_weight ≔ 0" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
+    <org.eventb.core.invariant name="5" org.eventb.core.label="inv7" org.eventb.core.predicate="¬ (∃arm · arm ∈ 1‥n_arms ∧ arms(arm) ≠ 0 ∧ arms(arm) + box_weight ≤ box_capacity) ∨&#13;&#10;((∃ free_arm · free_arm ∈ 1‥n_arms ∧ (arms(free_arm) = 0)) ∧ (∃ item_weight · item_weight ∈ 1‥max_item_weight)) ∨&#13;&#10;((∃ arm · arm ∈ 1‥n_arms ∧ arms(arm) ≠ 0 ∧ box_weight + arms(arm)≤ box_capacity))" org.eventb.core.theorem="true"/>
 </org.eventb.core.machineFile>
