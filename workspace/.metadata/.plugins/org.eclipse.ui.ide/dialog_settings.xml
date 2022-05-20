@@ -6,6 +6,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\luism\OneDrive\Escritorio\WMMF\CBC\2022-cars\Cars-2022"/>
+			<item value="C:\Users\luism\OneDrive\Escritorio\WMMF\CBC\sorted-array-search-HW2-2022_OG\Search-HW2-setup"/>
 			<item value="C:\Users\luism\OneDrive\Escritorio\workspace\RobotArmsProject"/>
 		</list>
 	</section>

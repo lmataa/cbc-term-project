@@ -2,7 +2,7 @@
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
     <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
         <org.eventb.core.action name="'" org.eventb.core.assignment="arms ≔ 1‥n_arms × {0}" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="box_capacity :∈ min_box_capacity‥max_box_capacity" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="box_capacity ≔ 0" org.eventb.core.label="act2"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="box_weight ≔ 0" org.eventb.core.label="act3"/>
     </org.eventb.core.event>
     <org.eventb.core.seesContext name="(" org.eventb.core.target="C0"/>
@@ -10,8 +10,8 @@
     <org.eventb.core.variable name="*" org.eventb.core.comment="Capacity of the current box" org.eventb.core.identifier="box_capacity"/>
     <org.eventb.core.invariant name="+" org.eventb.core.label="inv1" org.eventb.core.predicate="arms ∈ 1‥n_arms → 0‥max_item_weight"/>
     <org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="box_capacity ∈ ℕ"/>
-    <org.eventb.core.invariant name="." org.eventb.core.label="inv3" org.eventb.core.predicate="min_box_capacity ≤ box_capacity"/>
-    <org.eventb.core.invariant name="," org.eventb.core.label="inv4" org.eventb.core.predicate="box_capacity ≤ max_box_capacity"/>
+    <org.eventb.core.invariant name="." org.eventb.core.label="inv3" org.eventb.core.predicate="box_capacity ≠ 0 ⇒ min_box_capacity ≤ box_capacity"/>
+    <org.eventb.core.invariant name="," org.eventb.core.label="inv4" org.eventb.core.predicate="box_capacity ≠ 0 ⇒ box_capacity ≤ max_box_capacity"/>
     <org.eventb.core.variable name="/" org.eventb.core.comment="Total weight of the items in the current box" org.eventb.core.identifier="box_weight"/>
     <org.eventb.core.invariant name="1" org.eventb.core.label="inv5" org.eventb.core.predicate="box_weight ∈ ℕ"/>
     <org.eventb.core.invariant name="0" org.eventb.core.label="inv6" org.eventb.core.predicate="box_weight ≤ box_capacity"/>
@@ -26,15 +26,20 @@
     <org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PLACE_ITEM">
         <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="arm ∈ 1‥n_arms"/>
         <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="arms(arm) ≠ 0"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="box_capacity ≠ 0"/>
         <org.eventb.core.guard name="'" org.eventb.core.label="grd3" org.eventb.core.predicate="box_weight + arms(arm) ≤ box_capacity"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="arm"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="arms(arm) ≔ 0" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="*" org.eventb.core.assignment="box_weight ≔ box_weight + arms(arm)" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="4" org.eventb.core.comment="¬(∀ arm · arm ∈ 1‥n_arms ∧ (arms(arm) = 0 ∨ box_weight + arms(arm) &gt; box_capacity))" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="REPLACE_BOX">
-        <org.eventb.core.guard name="'" org.eventb.core.comment="Falta" org.eventb.core.label="grd1" org.eventb.core.predicate="¬ (∃arm · arm ∈ 1‥n_arms ∧ arms(arm) ≠ 0 ∧ arms(arm) + box_weight ≤ box_capacity)"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="box_capacity :∈ min_box_capacity‥max_box_capacity" org.eventb.core.label="act1"/>
+    <org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BOX_DEP">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="¬ (∃arm · arm ∈ 1‥n_arms ∧ arms(arm) ≠ 0 ∧ arms(arm) + box_weight ≤ box_capacity)"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="box_capacity ≔ 0" org.eventb.core.label="act1"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="box_weight ≔ 0" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
-    <org.eventb.core.invariant name="5" org.eventb.core.label="inv7" org.eventb.core.predicate="¬ (∃arm · arm ∈ 1‥n_arms ∧ arms(arm) ≠ 0 ∧ arms(arm) + box_weight ≤ box_capacity) ∨&#13;&#10;((∃ free_arm · free_arm ∈ 1‥n_arms ∧ (arms(free_arm) = 0)) ∧ (∃ item_weight · item_weight ∈ 1‥max_item_weight)) ∨&#13;&#10;((∃ arm · arm ∈ 1‥n_arms ∧ arms(arm) ≠ 0 ∧ box_weight + arms(arm)≤ box_capacity))" org.eventb.core.theorem="true"/>
+    <org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BOX_ARR">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="box_capacity = 0"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="box_capacity :∈ min_box_capacity‥max_box_capacity" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.invariant name="7" org.eventb.core.comment="TODO: Deadlock freedom" org.eventb.core.label="inv7" org.eventb.core.predicate="⊤" org.eventb.core.theorem="true"/>
 </org.eventb.core.machineFile>

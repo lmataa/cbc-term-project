@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+    <org.eventb.core.constant name="'" org.eventb.core.comment="Number of robotic arms" org.eventb.core.identifier="n_arms"/>
+    <org.eventb.core.constant name="(" org.eventb.core.comment="Maximum weight of an item" org.eventb.core.identifier="max_item_weight"/>
+    <org.eventb.core.constant name=")" org.eventb.core.comment="Minimum capacity of a box" org.eventb.core.identifier="min_box_capacity"/>
+    <org.eventb.core.axiom name="+" org.eventb.core.label="axm1" org.eventb.core.predicate="n_arms ∈ ℕ1"/>
+    <org.eventb.core.axiom name="," org.eventb.core.label="axm2" org.eventb.core.predicate="max_item_weight ∈ ℕ1"/>
+    <org.eventb.core.axiom name="-" org.eventb.core.label="axm3" org.eventb.core.predicate="min_box_capacity ∈ ℕ1"/>
+    <org.eventb.core.axiom name="0" org.eventb.core.label="axm4" org.eventb.core.predicate="max_box_capacity ∈ ℕ"/>
+    <org.eventb.core.axiom name="*" org.eventb.core.label="axm5" org.eventb.core.predicate="max_item_weight ≤ min_box_capacity"/>
+    <org.eventb.core.constant name="." org.eventb.core.comment="Maximum capacity of a box" org.eventb.core.identifier="max_box_capacity"/>
+    <org.eventb.core.axiom name="/" org.eventb.core.label="axm6" org.eventb.core.predicate="min_box_capacity ≤ max_box_capacity"/>
+</org.eventb.core.contextFile>
