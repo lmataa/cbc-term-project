@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="40">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="4">
+        <org.eventb.core.poIdentifier name="max_item_weight" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="max_box_capacity" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="min_box_capacity" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="n_arms" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poPredicate name="min_box_capacitz" org.eventb.core.predicate="n_arms∈ℕ1" org.eventb.core.source="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#+"/>
+        <org.eventb.core.poPredicate name="min_box_capacit{" org.eventb.core.predicate="max_item_weight∈ℕ1" org.eventb.core.source="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#,"/>
+        <org.eventb.core.poPredicate name="min_box_capacit|" org.eventb.core.predicate="min_box_capacity∈ℕ" org.eventb.core.source="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#-"/>
+        <org.eventb.core.poPredicate name="min_box_capacit}" org.eventb.core.predicate="max_box_capacity∈ℕ" org.eventb.core.source="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#0"/>
+        <org.eventb.core.poPredicate name="min_box_capacit~" org.eventb.core.predicate="max_item_weight≤min_box_capacity" org.eventb.core.source="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#*"/>
+        <org.eventb.core.poPredicate name="min_box_capaciu'" org.eventb.core.predicate="min_box_capacity≤max_box_capacity" org.eventb.core.source="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#\/"/>
+        <org.eventb.core.poIdentifier name="Sensor" org.eventb.core.type="ℙ(Sensor)"/>
+        <org.eventb.core.poIdentifier name="off" org.eventb.core.type="Sensor"/>
+        <org.eventb.core.poIdentifier name="on" org.eventb.core.type="Sensor"/>
+        <org.eventb.core.poPredicate name="min_box_capaciu(" org.eventb.core.predicate="Sensor={on,off}" org.eventb.core.source="/RobotArmsProject/Sensor.buc|org.eventb.core.contextFile#Sensor|org.eventb.core.axiom#*"/>
+        <org.eventb.core.poPredicate name="min_box_capaciu)" org.eventb.core.predicate="on≠off" org.eventb.core.source="/RobotArmsProject/Sensor.buc|org.eventb.core.contextFile#Sensor|org.eventb.core.axiom#+"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="box_capacity" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="arms" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+        <org.eventb.core.poIdentifier name="BOX_SR" org.eventb.core.type="Sensor"/>
+        <org.eventb.core.poIdentifier name="box_weight" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="BOX_PHY" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poPredicate name="box_capacitz" org.eventb.core.predicate="arms∈1 ‥ n_arms → 0 ‥ max_item_weight" org.eventb.core.source="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#+"/>
+        <org.eventb.core.poPredicate name="box_capacit{" org.eventb.core.predicate="box_capacity∈ℕ" org.eventb.core.source="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#-"/>
+        <org.eventb.core.poPredicate name="box_capacit|" org.eventb.core.predicate="min_box_capacity≤box_capacity" org.eventb.core.source="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#."/>
+        <org.eventb.core.poPredicate name="box_capacit}" org.eventb.core.predicate="box_capacity≤max_box_capacity" org.eventb.core.source="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#,"/>
+        <org.eventb.core.poPredicate name="box_capacit~" org.eventb.core.predicate="box_weight∈ℕ" org.eventb.core.source="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#1"/>
+        <org.eventb.core.poPredicate name="box_capaciu'" org.eventb.core.predicate="box_weight≤box_capacity" org.eventb.core.source="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#0"/>
+        <org.eventb.core.poPredicate name="box_capaciu(" org.eventb.core.predicate="¬(∃arm⦂ℤ·arm∈1 ‥ n_arms∧arms(arm)≠0∧arms(arm)+box_weight≤box_capacity)∨((∃free_arm⦂ℤ·free_arm∈1 ‥ n_arms∧arms(free_arm)=0)∧(∃item_weight⦂ℤ·item_weight∈1 ‥ max_item_weight))∨(∃arm⦂ℤ·arm∈1 ‥ n_arms∧arms(arm)≠0∧box_weight+arms(arm)≤box_capacity)" org.eventb.core.source="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#5"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="16">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPbox_capacitz"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="FALSE=TRUE⇒0≠0" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/act2/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPbox_capacitz"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈min_box_capacity ‥ max_box_capacity" org.eventb.core.source="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'|org.eventb.core.action#("/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'|org.eventb.core.action#("/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#INITIALISATION\/act2\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTbox_capacitz" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="BOX_SR'" org.eventb.core.type="Sensor"/>
+        <org.eventb.core.poIdentifier name="arms'" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+        <org.eventb.core.poIdentifier name="box_capacity'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="BOX_PHY'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="box_weight'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPbox_capacitz" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTbox_capacitz" org.eventb.core.poStamp="15"/>
+    <org.eventb.core.poPredicateSet name="EVTIDENTbox_capacit{" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
+        <org.eventb.core.poIdentifier name="free_arm" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="arms'" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+        <org.eventb.core.poIdentifier name="item_weight" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPbox_capacit{" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTbox_capacit{" org.eventb.core.poStamp="16">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="free_arm∈1 ‥ n_arms" org.eventb.core.source="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="arms(free_arm)=0" org.eventb.core.source="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.guard#'"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="item_weight∈1 ‥ max_item_weight" org.eventb.core.source="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#2|org.eventb.core.guard#-"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTbox_capacit|" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
+        <org.eventb.core.poIdentifier name="arm" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="arms'" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+        <org.eventb.core.poIdentifier name="box_weight'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPbox_capacit|" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTbox_capacit\|" org.eventb.core.poStamp="18">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="arm∈1 ‥ n_arms" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#1|org.eventb.core.guard#+"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="box_capacity&gt;0" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#1|org.eventb.core.guard#-"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="arms(arm)≠0" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#1|org.eventb.core.guard#,"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="box_weight+arms(arm)≤box_capacity" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#1|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="BOX_DEP/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="37">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTbox_capacit}"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀arm⦂ℤ·arm∈1 ‥ n_arms⇒arm∈dom(arms)∧arms∈ℤ ⇸ ℤ" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#2|org.eventb.core.guard#'"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#2|org.eventb.core.guard#'"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTbox_capacit}"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="BOX_DEP/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="37">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPbox_capacit}">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="box_capacity'∈min_box_capacity ‥ max_box_capacity" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#2|org.eventb.core.action#("/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="BOX_PHY=TRUE⇒box_capacity'≠0" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#2"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#BOX_DEP\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="BOX_DEP/act1/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="37">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPbox_capacit}"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="min_box_capacity ‥ max_box_capacity≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#2|org.eventb.core.action#("/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#2|org.eventb.core.action#("/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPbox_capacit}"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="BOX_DEP/box_capacity/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="37">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPbox_capacit}">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="box_capacity'∈min_box_capacity ‥ max_box_capacity" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#2|org.eventb.core.action#("/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="box_capacity'=box_capacity" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#2|org.eventb.core.action#("/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#2"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#BOX_DEP\/box_capacity\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="BOX_DEP/box_weight/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="37">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPbox_capacit}"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=box_weight" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#2|org.eventb.core.action#)"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#2"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#BOX_DEP\/box_weight\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTbox_capacit}" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="37">
+        <org.eventb.core.poIdentifier name="box_capacity'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="box_weight'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPbox_capacit}" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTbox_capacit}" org.eventb.core.poStamp="37">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="¬(∃arm⦂ℤ·arm∈1 ‥ n_arms∧arms(arm)≠0∧arms(arm)+box_weight≤box_capacity)" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#2|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="BOX_ARR/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="36">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPbox_capacit~"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="TRUE=TRUE⇒box_capacity≠0" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#6"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#BOX_ARR\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTbox_capacit~" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="36">
+        <org.eventb.core.poIdentifier name="BOX_PHY'" org.eventb.core.type="BOOL"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPbox_capacit~" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTbox_capacit~" org.eventb.core.poStamp="36">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="BOX_SR=off" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#6|org.eventb.core.guard#'"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="box_capacity=0" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#6|org.eventb.core.guard#*"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="BOX_SR_CH/grd1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="32">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTbox_capaciu'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="BOX_PHY=FALSE" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#7|org.eventb.core.guard#'"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#7|org.eventb.core.guard#'"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTbox_capaciu'"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="BOX_SR_CH/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="32">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPbox_capaciu'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="BOX_PHY=TRUE⇒0≠0" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#7"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#BOX_SR_CH\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="BOX_SR_CH/box_capacity/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="32">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPbox_capaciu'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=box_capacity" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#7|org.eventb.core.action#*"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#7"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#BOX_SR_CH\/box_capacity\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTbox_capaciu'" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="32">
+        <org.eventb.core.poIdentifier name="BOX_SR'" org.eventb.core.type="Sensor"/>
+        <org.eventb.core.poIdentifier name="box_capacity'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPbox_capaciu'" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTbox_capaciu'" org.eventb.core.poStamp="32">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="BOX_PHY=FALSE" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#7|org.eventb.core.guard#'"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="BOX_SR=on" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#7|org.eventb.core.guard#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="REPLACE_BOX/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="40">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPbox_capaciu(">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="box_capacity'∈min_box_capacity ‥ max_box_capacity" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#8|org.eventb.core.action#("/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="TRUE=TRUE⇒box_capacity'≠0" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/RobotArmsProject/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#4"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#8"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#5"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#REPLACE_BOX\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTbox_capaciu(" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="39">
+        <org.eventb.core.poIdentifier name="box_capacity'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="BOX_PHY'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="box_weight'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPbox_capaciu(" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTbox_capaciu(" org.eventb.core.poStamp="40">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="¬(∃arm⦂ℤ·arm∈1 ‥ n_arms∧arms(arm)≠0∧arms(arm)+box_weight≤box_capacity)" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#8|org.eventb.core.guard#'"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="BOX_SR=off" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#8|org.eventb.core.guard#+"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/RobotArmsProject/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="16">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="BOX_SR∈Sensor" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#*"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="BOX_PHY=TRUE⇒box_capacity≠0" org.eventb.core.source="/RobotArmsProject/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#5"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

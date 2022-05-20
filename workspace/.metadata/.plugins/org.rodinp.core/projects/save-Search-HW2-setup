@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pim project="/Search-HW2-setup">
+    <rodin_index>
+        <descriptor element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.variable#0" name="p">
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#6|org.eventb.core.action#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="6" loc_char_start="5"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.variant#7" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.expression" loc_char_end="5" loc_char_start="4"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.invariant#2" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.invariant#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="7" loc_char_start="6"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.variable#0" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.invariant#4" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="4"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#-|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#.|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+        </descriptor>
+        <descriptor element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#." name="Progress_inc">
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#." kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+        </descriptor>
+        <descriptor element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#." name="Finish">
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#\/|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+            <occurrence element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#." kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+        </descriptor>
+        <descriptor element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.constant#(" name="f">
+            <occurrence element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.constant#(" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+            <occurrence element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#.|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#-|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#6|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#.|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_C1.buc|org.eventb.core.contextFile#Search_C1|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="38" loc_char_start="37"/>
+            <occurrence element="/Search-HW2-setup/Search_C1.buc|org.eventb.core.contextFile#Search_C1|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="45" loc_char_start="44"/>
+            <occurrence element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.axiom#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.invariant#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="5" loc_char_start="4"/>
+            <occurrence element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.axiom#-" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="9" loc_char_start="8"/>
+        </descriptor>
+        <descriptor element="/Search-HW2-setup/Search_C1.buc|org.eventb.core.contextFile#Search_C1" name="Search_C1">
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.seesContext#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+            <occurrence element="/Search-HW2-setup/Search_C1.buc|org.eventb.core.contextFile#Search_C1" kind="org.eventb.core.declaration"/>
+        </descriptor>
+        <descriptor element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#6" name="Progress_dec">
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#6" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+        </descriptor>
+        <descriptor element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0" name="Search_M0">
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.refinesMachine#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+            <occurrence element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0" kind="org.eventb.core.declaration"/>
+        </descriptor>
+        <descriptor element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.variable#)" name="r">
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#.|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="2"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#.|org.eventb.core.action#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="6" loc_char_start="5"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.variable#)" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#.|org.eventb.core.action#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="5" loc_char_start="4"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#.|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#6|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="2"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#-|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#6|org.eventb.core.action#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="5" loc_char_start="4"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#6|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#6|org.eventb.core.action#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="8" loc_char_start="7"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.invariant#4" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+        </descriptor>
+        <descriptor element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.constant#)" name="v">
+            <occurrence element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#-|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="7"/>
+            <occurrence element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.constant#)" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+            <occurrence element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#.|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="7"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#6|org.eventb.core.guard#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="7"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#.|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="8" loc_char_start="7"/>
+            <occurrence element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.axiom#-" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.invariant#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+        </descriptor>
+        <descriptor element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1" name="Search_bin_M1">
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1" kind="org.eventb.core.declaration"/>
+        </descriptor>
+        <descriptor element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#\/" name="Finish">
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#\/" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+        </descriptor>
+        <descriptor element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#-" name="Progress">
+            <occurrence element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#-" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#6|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#.|org.eventb.core.refinesEvent#'" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.target"/>
+        </descriptor>
+        <descriptor element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#-" name="INITIALISATION">
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#-" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+        </descriptor>
+        <descriptor element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#'" name="INITIALISATION">
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#-" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.label"/>
+            <occurrence element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+        </descriptor>
+        <descriptor element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.constant#'" name="n">
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.invariant#3" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="7" loc_char_start="6"/>
+            <occurrence element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.invariant#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="7" loc_char_start="6"/>
+            <occurrence element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.axiom#." kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.axiom#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="7" loc_char_start="6"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.invariant#2" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="7" loc_char_start="6"/>
+            <occurrence element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#-|org.eventb.core.action#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="8" loc_char_start="7"/>
+            <occurrence element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.constant#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+            <occurrence element="/Search-HW2-setup/Search_C1.buc|org.eventb.core.contextFile#Search_C1|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="14" loc_char_start="13"/>
+            <occurrence element="/Search-HW2-setup/Search_C1.buc|org.eventb.core.contextFile#Search_C1|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="24" loc_char_start="23"/>
+            <occurrence element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#'|org.eventb.core.action#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="8" loc_char_start="7"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#-|org.eventb.core.action#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="5" loc_char_start="4"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#-|org.eventb.core.action#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="8" loc_char_start="7"/>
+        </descriptor>
+        <descriptor element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.variable#)" name="r">
+            <occurrence element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#'|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#-|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="2"/>
+            <occurrence element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.variable#)" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+            <occurrence element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.invariant#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.variable#)" kind="org.eventb.core.redeclaration" loc_attribute="org.eventb.core.identifier"/>
+            <occurrence element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#-|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#.|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="3" loc_char_start="2"/>
+        </descriptor>
+        <descriptor element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.variable#1" name="q">
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.variant#7" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.expression" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#6|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.invariant#5" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="9" loc_char_start="8"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.invariant#3" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.invariant#4" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="7" loc_char_start="6"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.variable#1" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#-|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+            <occurrence element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#.|org.eventb.core.action#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="14" loc_char_start="13"/>
+        </descriptor>
+        <descriptor element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0" name="Search_C0">
+            <occurrence element="/Search-HW2-setup/Search_C1.buc|org.eventb.core.contextFile#Search_C1|org.eventb.core.extendsContext#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+            <occurrence element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.seesContext#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+            <occurrence element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0" kind="org.eventb.core.declaration"/>
+        </descriptor>
+    </rodin_index>
+    <export_table>
+        <export file="/Search-HW2-setup/Search_M0.bum">
+            <exported element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0" name="Search_C0"/>
+            <exported element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#-" name="Progress"/>
+            <exported element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0" name="Search_M0"/>
+            <exported element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.constant#'" name="n"/>
+            <exported element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.constant#)" name="v"/>
+            <exported element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.variable#)" name="r"/>
+            <exported element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#." name="Finish"/>
+            <exported element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0|org.eventb.core.event#'" name="INITIALISATION"/>
+            <exported element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.constant#(" name="f"/>
+        </export>
+        <export file="/Search-HW2-setup/Search_C0.buc">
+            <exported element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0" name="Search_C0"/>
+            <exported element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.constant#'" name="n"/>
+            <exported element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.constant#)" name="v"/>
+            <exported element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.constant#(" name="f"/>
+        </export>
+        <export file="/Search-HW2-setup/Search_bin_M1.bum">
+            <exported element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0" name="Search_C0"/>
+            <exported element="/Search-HW2-setup/Search_C1.buc|org.eventb.core.contextFile#Search_C1" name="Search_C1"/>
+            <exported element="/Search-HW2-setup/Search_M0.bum|org.eventb.core.machineFile#Search_M0" name="Search_M0"/>
+            <exported element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.variable#0" name="p"/>
+            <exported element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.constant#'" name="n"/>
+            <exported element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#-" name="INITIALISATION"/>
+            <exported element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1" name="Search_bin_M1"/>
+            <exported element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.variable#)" name="r"/>
+            <exported element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#." name="Progress_inc"/>
+            <exported element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#\/" name="Finish"/>
+            <exported element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.variable#1" name="q"/>
+            <exported element="/Search-HW2-setup/Search_bin_M1.bum|org.eventb.core.machineFile#Search_bin_M1|org.eventb.core.event#6" name="Progress_dec"/>
+            <exported element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.constant#)" name="v"/>
+            <exported element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.constant#(" name="f"/>
+        </export>
+        <export file="/Search-HW2-setup/Search_C1.buc">
+            <exported element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0" name="Search_C0"/>
+            <exported element="/Search-HW2-setup/Search_C1.buc|org.eventb.core.contextFile#Search_C1" name="Search_C1"/>
+            <exported element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.constant#'" name="n"/>
+            <exported element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.constant#)" name="v"/>
+            <exported element="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.constant#(" name="f"/>
+        </export>
+    </export_table>
+    <graph is_sorted="true">
+        <node label="/Search-HW2-setup/Search_C0.buc" mark="false" order_pos="0"/>
+        <node label="/Search-HW2-setup/Search_C1.buc" mark="false" order_pos="1">
+            <predecessor label="/Search-HW2-setup/Search_C0.buc"/>
+        </node>
+        <node label="/Search-HW2-setup/Search_M0.bum" mark="false" order_pos="2">
+            <predecessor label="/Search-HW2-setup/Search_C0.buc"/>
+        </node>
+        <node label="/Search-HW2-setup/Search_bin_M1.bum" mark="false" order_pos="3">
+            <predecessor label="/Search-HW2-setup/Search_M0.bum"/>
+            <predecessor label="/Search-HW2-setup/Search_C1.buc"/>
+        </node>
+    </graph>
+    <unprocessed file="/Search-HW2-setup/Search_C0.bcc"/>
+    <unprocessed file="/Search-HW2-setup/Search_C0.bpo"/>
+    <unprocessed file="/Search-HW2-setup/Search_C0.bpr"/>
+    <unprocessed file="/Search-HW2-setup/Search_C0.bps"/>
+    <unprocessed file="/Search-HW2-setup/Search_C1.bcc"/>
+    <unprocessed file="/Search-HW2-setup/Search_C1.bpo"/>
+    <unprocessed file="/Search-HW2-setup/Search_C1.bpr"/>
+    <unprocessed file="/Search-HW2-setup/Search_C1.bps"/>
+    <unprocessed file="/Search-HW2-setup/Search_C2_strict_less_than.bpr"/>
+    <unprocessed file="/Search-HW2-setup/Search_M0.bcm"/>
+    <unprocessed file="/Search-HW2-setup/Search_M0.bpo"/>
+    <unprocessed file="/Search-HW2-setup/Search_M0.bpr"/>
+    <unprocessed file="/Search-HW2-setup/Search_M0.bps"/>
+    <unprocessed file="/Search-HW2-setup/Search_bin_C1.bpr"/>
+    <unprocessed file="/Search-HW2-setup/Search_bin_M1.bcm"/>
+    <unprocessed file="/Search-HW2-setup/Search_bin_M1.bpo"/>
+    <unprocessed file="/Search-HW2-setup/Search_bin_M1.bpr"/>
+    <unprocessed file="/Search-HW2-setup/Search_bin_M1.bps"/>
+    <unprocessed file="/Search-HW2-setup/Search_lin_M1.bpr"/>
+    <unprocessed file="/Search-HW2-setup/Search_bin_M1.bcm_tmp"/>
+</pim>
