@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="Robot arms synchronization when placing items in the box." org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="arms ≔ 1‥n_arms × {0}" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="BOX_SR ≔ off" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="box_capacity ≔ 0" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="box_weight ≔ 0" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="BOX_PHY ≔ FALSE" org.eventb.core.label="act5"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="BUSY_SR ≔ 0" org.eventb.core.comment="There is no arm busy at first" org.eventb.core.label="act6"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="BUSY_PHY ≔ 0" org.eventb.core.label="act7"/>
+    </org.eventb.core.event>
+    <org.eventb.core.refinesMachine name="(" org.eventb.core.target="M1"/>
+    <org.eventb.core.variable name=")" org.eventb.core.identifier="arms"/>
+    <org.eventb.core.invariant name="*" org.eventb.core.comment="Idle controller for the arms.&#13;&#10;Set to 0 means that there is no arm busy." org.eventb.core.label="inv1" org.eventb.core.predicate="BUSY_SR ∈ 0‥n_arms "/>
+    <org.eventb.core.variable name="+" org.eventb.core.identifier="box_capacity"/>
+    <org.eventb.core.variable name="," org.eventb.core.identifier="box_weight"/>
+    <org.eventb.core.variable name="-" org.eventb.core.identifier="BOX_SR"/>
+    <org.eventb.core.invariant name="." org.eventb.core.comment="Physical variable to model the behavior of the arm.&#13;&#10;Set to FALSE means that the arm is in its idle position." org.eventb.core.label="inv2" org.eventb.core.predicate="BUSY_PHY ∈ 0‥n_arms"/>
+    <org.eventb.core.variable name="/" org.eventb.core.identifier="BOX_PHY"/>
+    <org.eventb.core.seesContext name="0" org.eventb.core.target="C0"/>
+    <org.eventb.core.seesContext name="1" org.eventb.core.target="Sensor"/>
+    <org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PICK_ITEM">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="PICK_ITEM"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="free_arm ∈ 1‥n_arms"/>
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd2" org.eventb.core.predicate="arms(free_arm) = 0"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.identifier="free_arm"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="arms(free_arm) ≔ item_weight" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="," org.eventb.core.identifier="item_weight"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="item_weight ∈ 1‥max_item_weight"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="BUSY_SR ≠ free_arm"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BOX_DEP">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="BOX_DEP"/>
+        <org.eventb.core.guard name="'" org.eventb.core.comment="Falta" org.eventb.core.label="grd1" org.eventb.core.predicate="¬ (∃arm · arm ∈ 1‥n_arms ∧ arms(arm) ≠ 0 ∧ arms(arm) + box_weight ≤ box_capacity)"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="box_weight ≔ 0" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="box_capacity ≔ 0" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="BOX_PHY ≔ FALSE" org.eventb.core.label="act3"/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd3" org.eventb.core.predicate="BUSY_SR = 0"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="BOX_SR = on"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="BOX_SR ≔ off" org.eventb.core.label="act5"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name=":" org.eventb.core.comment="The controller sends the signal&#13;&#10;to the arm for it to start to move" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SIGNAL_ARM">
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="arm ∈ 1‥n_arms"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="BUSY_SR ≔ arm" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.identifier="arm"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="arms(arm) ≠ 0"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="box_weight + arms(arm) ≤ box_capacity"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="BOX_SR = on"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="BUSY_SR = 0"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="8" org.eventb.core.comment="The signaled arm starts to move" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="MOVE_ARM_PHY">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="BUSY_SR ≠ 0"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="BUSY_PHY ≔ BUSY_SR" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="BUSY_PHY = 0"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PLACE_ITEM">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="BUSY_SR ≠ 0"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="arms(arm) ≔ 0" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="box_weight ≔ box_weight + arms(arm)" org.eventb.core.label="act2"/>
+        <org.eventb.core.refinesEvent name="*" org.eventb.core.target="PLACE_ITEM"/>
+        <org.eventb.core.parameter name="+" org.eventb.core.identifier="arm"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="BUSY_SR = arm"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="BUSY_SR ≔ 0" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RESTORE_ARM_PHY">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="BUSY_SR = 0"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="BUSY_PHY ≠ 0"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="BUSY_PHY ≔ 0" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="arms(BUSY_PHY) = 0"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="BOX_ARR">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="BOX_ARR"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="BOX_ARR_PHY">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="BOX_ARR_PHY"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="7" org.eventb.core.identifier="BUSY_SR"/>
+    <org.eventb.core.variable name="9" org.eventb.core.identifier="BUSY_PHY"/>
+    <org.eventb.core.invariant name="&gt;" org.eventb.core.label="inv4" org.eventb.core.predicate="BUSY_SR ≠ 0 ⇒ (&#13;&#10; BOX_SR = on ∧&#13;&#10; box_weight + arms(BUSY_SR) ≤ box_capacity)"/>
+    <org.eventb.core.invariant name="A" org.eventb.core.label="inv5" org.eventb.core.predicate="BUSY_SR ≠ 0 ⇒ arms(BUSY_SR) ≠ 0"/>
+    <org.eventb.core.invariant name="B" org.eventb.core.label="inv6" org.eventb.core.predicate="BUSY_SR ≠ 0 ⇒ BOX_SR = on"/>
+    <org.eventb.core.invariant name="C" org.eventb.core.label="inv7" org.eventb.core.predicate="BUSY_PHY ≠ 0 ∧ BUSY_SR = 0 ⇒ arms(BUSY_PHY) = 0 "/>
+</org.eventb.core.machineFile>
