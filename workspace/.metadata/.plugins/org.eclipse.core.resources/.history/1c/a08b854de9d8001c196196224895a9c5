@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+    <org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/RobotArmsProject/C0.bcc|org.eventb.core.scContextFile#C0" org.eventb.core.source="/RobotArmsProject/IdleController.buc|org.eventb.core.contextFile#IdleController|org.eventb.core.extendsContext#)"/>
+    <org.eventb.core.scInternalContext name="C0">
+        <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="n_arms∈ℕ1" org.eventb.core.source="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="max_item_weight∈ℕ1" org.eventb.core.source="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#," org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="min_box_capacity∈ℕ1" org.eventb.core.source="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#-" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="*" org.eventb.core.label="axm4" org.eventb.core.predicate="max_box_capacity∈ℕ1" org.eventb.core.source="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#0" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="+" org.eventb.core.label="axm5" org.eventb.core.predicate="max_item_weight≤min_box_capacity" org.eventb.core.source="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="," org.eventb.core.label="axm6" org.eventb.core.predicate="min_box_capacity≤max_box_capacity" org.eventb.core.source="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#\/" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scConstant name="max_item_weight" org.eventb.core.source="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#(" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.scConstant name="max_box_capacity" org.eventb.core.source="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#." org.eventb.core.type="ℤ"/>
+        <org.eventb.core.scConstant name="min_box_capacity" org.eventb.core.source="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#)" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.scConstant name="n_arms" org.eventb.core.source="/RobotArmsProject/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.scInternalContext>
+    <org.eventb.core.scAxiom name="C1" org.eventb.core.label="axm1" org.eventb.core.predicate="finite(IDLE_ARMS)" org.eventb.core.source="/RobotArmsProject/IdleController.buc|org.eventb.core.contextFile#IdleController|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="C2" org.eventb.core.label="axm2" org.eventb.core.predicate="card(IDLE_ARMS)=n_arms" org.eventb.core.source="/RobotArmsProject/IdleController.buc|org.eventb.core.contextFile#IdleController|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scCarrierSet name="IDLE_ARMS" org.eventb.core.source="/RobotArmsProject/IdleController.buc|org.eventb.core.contextFile#IdleController|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(IDLE_ARMS)"/>
+</org.eventb.core.scContextFile>
