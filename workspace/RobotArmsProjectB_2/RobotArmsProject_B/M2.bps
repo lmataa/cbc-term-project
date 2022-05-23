@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+    <org.eventb.core.psStatus name="inv4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="inv5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="inv7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PICK_ITEM/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PICK_ITEM/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PICK_ITEM/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BOX_DEP/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="156" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="BOX_DEP/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="156" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="SIGNAL_ARM/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SIGNAL_ARM/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SIGNAL_ARM/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SIGNAL_ARM/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SIGNAL_ARM/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SIGNAL_ARM/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SIGNAL_ARM/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SIGNAL_ARM/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="MOVE_ARM_PHY/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="MOVE_ARM_PHY/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="MOVE_ARM_PHY/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PLACE_ITEM/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PLACE_ITEM/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PLACE_ITEM/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PLACE_ITEM/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PLACE_ITEM/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PLACE_ITEM/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PLACE_ITEM/grd2/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PLACE_ITEM/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PLACE_ITEM/grd4/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="RESTORE_ARM_PHY/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="RESTORE_ARM_PHY/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="RESTORE_ARM_PHY/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="RESTORE_ARM_PHY/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BOX_ARR/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BOX_ARR/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="155" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>
