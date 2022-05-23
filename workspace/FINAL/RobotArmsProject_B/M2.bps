@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+    <org.eventb.core.psStatus name="inv2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="help/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="help/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="inv4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="inv4/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PICK_ITEM/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CHOOSE_ARM/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CHOOSE_ARM/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CHOOSE_ARM/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CHOOSE_ARM/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CHOOSE_ARM/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PLACE_ITEM/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="STOP_ARM/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="STOP_ARM/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="STOP_ARM/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BOX_ARR/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BOX_ARR/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BOX_DEP/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BOX_DEP/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BOX_DEP/vrn1/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="185" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>
