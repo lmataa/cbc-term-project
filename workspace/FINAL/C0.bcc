@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+    <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="n_arms∈ℕ1" org.eventb.core.source="/RobotArmsProject_B_final/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="max_item_weight∈ℕ1" org.eventb.core.source="/RobotArmsProject_B_final/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#," org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="min_box_capacity∈ℕ1" org.eventb.core.source="/RobotArmsProject_B_final/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#-" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="*" org.eventb.core.label="axm4" org.eventb.core.predicate="max_box_capacity∈ℕ1" org.eventb.core.source="/RobotArmsProject_B_final/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#0" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="+" org.eventb.core.label="axm5" org.eventb.core.predicate="max_item_weight≤min_box_capacity" org.eventb.core.source="/RobotArmsProject_B_final/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="," org.eventb.core.label="axm6" org.eventb.core.predicate="min_box_capacity≤max_box_capacity" org.eventb.core.source="/RobotArmsProject_B_final/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#\/" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scConstant name="max_item_weight" org.eventb.core.source="/RobotArmsProject_B_final/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#(" org.eventb.core.type="ℤ"/>
+    <org.eventb.core.scConstant name="max_box_capacity" org.eventb.core.source="/RobotArmsProject_B_final/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#." org.eventb.core.type="ℤ"/>
+    <org.eventb.core.scConstant name="min_box_capacity" org.eventb.core.source="/RobotArmsProject_B_final/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#)" org.eventb.core.type="ℤ"/>
+    <org.eventb.core.scConstant name="n_arms" org.eventb.core.source="/RobotArmsProject_B_final/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.scContextFile>
