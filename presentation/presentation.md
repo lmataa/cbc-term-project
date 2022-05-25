@@ -42,10 +42,94 @@ Introduction text
 # Problems
 
 
-# 
+# Models
 
-\section{Conclusion and Future}
-\label{conclusion}
+
+% Model 0
+\begin{frame}[containsverbatim]{Model 0}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.08]{res/model0.svg}
+\end{figure}
+\end{frame}
+
+
+
+% Model 1
+\begin{frame}[containsverbatim]{Model 1}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.08]{res/model1.svg}
+\end{figure}
+\end{frame}
+
+
+
+% Model 2
+\begin{frame}[containsverbatim]{Model 2}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.08]{res/model2.svg}
+\end{figure}
+\end{frame}
+
+
+
+% Model 3
+\begin{frame}[containsverbatim]{Model 3}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.08]{res/model3.svg}
+\end{figure}
+\end{frame}
+
+
+
+% Model 0 Sensors
+\begin{frame}[containsverbatim]{Model 0 Sensors}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.12]{res/map0.svg}
+\end{figure}
+\end{frame}
+
+
+
+% Model 1 Sensors
+\begin{frame}[containsverbatim]{Model 1 Sensors}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.12]{res/map1.svg}
+\end{figure}
+\end{frame}
+
+
+
+% Model 2 Sensors
+\begin{frame}[containsverbatim]{Model 2 Sensors}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.12]{res/map2.svg}
+\end{figure}
+\end{frame}
+
+
+
+% Model 3 Sensors
+\begin{frame}[containsverbatim]{Model 3 Sensors}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.12]{res/map3.svg}
+\end{figure}
+\end{frame}
 
 # Conclusion
 

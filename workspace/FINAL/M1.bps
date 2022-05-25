@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="inv4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="112" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="inv4/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="112" org.eventb.core.psManual="true"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="112" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="112" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="PLACE_ITEM/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="112" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="PLACE_ITEM/grd4/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="112" org.eventb.core.psManual="true"/>
-    <org.eventb.core.psStatus name="BOX_ARR_PHY/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="112" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="BOX_ARR/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="112" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="BOX_ARR/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="112" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="BOX_ARR/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="112" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="BOX_DEP/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="112" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="BOX_DEP/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="112" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="BOX_DEP/vrn1/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="112" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="inv4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="inv4/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PLACE_ITEM/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PLACE_ITEM/grd4/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="BOX_ARR_PHY/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BOX_ARR/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BOX_ARR/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BOX_ARR/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BOX_DEP/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BOX_DEP/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BOX_DEP/vrn1/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
