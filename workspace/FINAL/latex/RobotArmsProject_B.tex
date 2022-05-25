@@ -1,0 +1,321 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\MultiTitle{RobotArmsProject\_B}
+\MultiHeader{CONTEXT}{C0}
+\CONTEXT{C0}{}{}
+\CONSTANTS{
+	\Constant{n\_arms}{Number of robotic arms}
+	\Constant{max\_item\_weight}{Maximum weight of an item}
+	\Constant{min\_box\_capacity}{Minimum capacity of a box}
+	\Constant{max\_box\_capacity}{Maximum capacity of a box}
+}
+\AXIOMS{
+	\Axiom{axm1}{false}{$n\_arms \in{} \natn{}$}{}
+	\Axiom{axm2}{false}{$max\_item\_weight \in{} \natn{}$}{}
+	\Axiom{axm3}{false}{$min\_box\_capacity \in{} \natn{}$}{}
+	\Axiom{axm4}{false}{$max\_box\_capacity \in{} \natn{}$}{}
+	\Axiom{axm5}{false}{$max\_item\_weight \leq{} min\_box\_capacity$}{}
+	\Axiom{axm6}{false}{$min\_box\_capacity \leq{} max\_box\_capacity$}{}
+}
+\END
+\MultiHeader{CONTEXT}{Sensor}
+\CONTEXT{Sensor}{}{}
+\SETS{
+	\Set{Sensor}{}
+}
+\CONSTANTS{
+	\Constant{on}{}
+	\Constant{off}{}
+}
+\AXIOMS{
+	\Axiom{axm1}{false}{$Sensor = \{on, off\}$}{}
+	\Axiom{axm2}{false}{$on \neq{} off$}{}
+}
+\END
+\MultiHeader{MACHINE}{M0}
+\MACHINE{M0}{}{C0}{\\Abstract machine}
+\VARIABLES{
+	\Variable{arms}{Weights of the items being held by the n$\_$arms robotic arms}
+	\Variable{box\_capacity}{Capacity of the current box}
+	\Variable{box\_weight}{Total weight of the items in the current box}
+}
+\INVARIANTS{
+	\Invariant{inv1}{false}{$arms \in{} 1\upto{}n\_arms \tfun{} 0\upto{}max\_item\_weight$}{}
+	\Invariant{inv2}{false}{$box\_capacity \in{} \nat{}$}{}
+	\Invariant{inv3}{false}{$box\_capacity \neq{} 0 \limp{} min\_box\_capacity \leq{} box\_capacity$}{}
+	\Invariant{inv4}{false}{$box\_capacity \neq{} 0 \limp{} box\_capacity \leq{} max\_box\_capacity$}{}
+	\Invariant{inv5}{false}{$box\_weight \in{} \nat{}$}{}
+	\Invariant{inv6}{false}{$box\_weight \leq{} box\_capacity$}{}
+	\Invariant{inv7}{true}{$\\(\exists{} free\_arm, item\_weight \qdot{} free\_arm \in{} 1\upto{}n\_arms \land{} arms(free\_arm) = 0 \land{} item\_weight \in{} 1\upto{}max\_item\_weight) \lor{}\\(\exists{} arm \qdot{} arm \in{} 1\upto{}n\_arms \land{} arms(arm) \neq{} 0 \land{} box\_capacity \neq{} 0 \land{} box\_weight + arms(arm) \leq{} box\_capacity) \lor{}\\\lnot{} (\exists{} arm \qdot{} arm \in{} 1\upto{}n\_arms \land{} arms(arm) \neq{} 0 \land{} arms(arm) + box\_weight \leq{} box\_capacity) \lor{}\\box\_capacity = 0$}{\\Deadlock freedom}
+}
+\VARIANT{
+	\Variant{$box\_capacity - box\_weight$}{}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$arms \bcmeq{} 1\upto{}n\_arms \cprod{} \{0\}$}{true}{}
+		\Action{act2}{$box\_capacity \bcmeq{} 0$}{true}{}
+		\Action{act3}{$box\_weight \bcmeq{} 0$}{true}{}
+	}
+}
+\EVT{PICK\_ITEM}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{free\_arm}{true}{}
+		\Param{item\_weight}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$free\_arm \in{} 1\upto{}n\_arms$}{true}{}
+		\Guard{grd2}{false}{$arms(free\_arm) = 0$}{true}{}
+		\Guard{grd3}{false}{$item\_weight \in{} 1\upto{}max\_item\_weight$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$arms(free\_arm) \bcmeq{} item\_weight$}{true}{}
+	}
+}
+\EVT{PLACE\_ITEM}{false}{convergent}{}{}{
+	\ANY{
+		\Param{arm}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$arm \in{} 1\upto{}n\_arms$}{true}{}
+		\Guard{grd2}{false}{$arms(arm) \neq{} 0$}{true}{}
+		\Guard{grd4}{false}{$box\_capacity \neq{} 0$}{true}{}
+		\Guard{grd3}{false}{$box\_weight + arms(arm) \leq{} box\_capacity$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$arms(arm) \bcmeq{} 0$}{true}{}
+		\Action{act2}{$box\_weight \bcmeq{} box\_weight + arms(arm)$}{true}{}
+	}
+}
+\EVT{BOX\_DEP}{false}{anticipated}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$\lnot{} (\exists{} arm \qdot{} arm \in{} 1\upto{}n\_arms \land{} arms(arm) \neq{} 0 \land{} arms(arm) + box\_weight \leq{} box\_capacity)$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$box\_capacity \bcmeq{} 0$}{true}{}
+		\Action{act2}{$box\_weight \bcmeq{} 0$}{true}{}
+	}
+}
+\EVT{BOX\_ARR}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$box\_capacity = 0$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$box\_capacity \bcmin{} min\_box\_capacity\upto{}max\_box\_capacity$}{true}{}
+	}
+}
+}
+\END
+\MultiHeader{MACHINE}{M1}
+\MACHINE{M1}{M0}{C0,Sensor}{\\Box physical presence and associated sensors}
+\VARIABLES{
+	\Variable{arms}{As in previous refinement}
+	\Variable{box\_capacity}{As in previous refinement}
+	\Variable{box\_weight}{As in previous refinement}
+	\Variable{BOX\_SR}{Sensor that captures the presence of a new box (i.e., it's the knowledge of the controller about the presence of a box)}
+	\Variable{BOX\_PHY}{Physical presence of a box}
+}
+\INVARIANTS{
+	\Invariant{inv1}{false}{$BOX\_SR \in{} Sensor$}{}
+	\Invariant{inv2}{false}{$BOX\_SR = off \leqv{} box\_capacity = 0 $}{}
+	\Invariant{inv3}{false}{$BOX\_PHY = FALSE \limp{} box\_capacity = 0$}{}
+	\Invariant{inv4}{true}{$\\((\exists{} free\_arm, item\_weight \qdot{} free\_arm \in{} 1\upto{}n\_arms \land{} arms(free\_arm) = 0 \land{} item\_weight \in{} 1\upto{}max\_item\_weight) \lor{}\\(\exists{} arm \qdot{} arm \in{} 1\upto{}n\_arms \land{} arms(arm) \neq{} 0 \land{} box\_capacity \neq{} 0 \land{} box\_weight + arms(arm) \leq{} box\_capacity) \lor{}\\\lnot{} (\exists{} arm \qdot{} arm \in{} 1\upto{}n\_arms \land{} arms(arm) \neq{} 0 \land{} arms(arm) + box\_weight \leq{} box\_capacity) \lor{}\\box\_capacity = 0)\\\limp{}\\((\exists{} free\_arm, item\_weight \qdot{} free\_arm \in{} 1\upto{}n\_arms \land{} arms(free\_arm) = 0 \land{} item\_weight \in{} 1\upto{}max\_item\_weight) \lor{}\\(\exists{} arm \qdot{} arm \in{} 1\upto{}n\_arms \land{} arms(arm) \neq{} 0 \land{} box\_capacity \neq{} 0 \land{} box\_weight + arms(arm) \leq{} box\_capacity \land{} BOX\_SR = on) \lor{}\\BOX\_SR = off \lor{}\\(BOX\_SR = off \land{} BOX\_PHY = TRUE) \lor{}\\(\lnot{} (\exists{} arm \qdot{} arm \in{} 1\upto{}n\_arms \land{} arms(arm) \neq{} 0 \land{} arms(arm) + box\_weight \leq{} box\_capacity) \land{} BOX\_SR = on))$}{\\Deadlock freedom}
+}
+\VARIANT{
+	\Variant{$box\_capacity - box\_weight$}{}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$arms \bcmeq{} 1\upto{}n\_arms \cprod{} \{0\}$}{true}{}
+		\Action{act2}{$box\_capacity \bcmeq{} 0$}{true}{}
+		\Action{act3}{$box\_weight \bcmeq{} 0$}{true}{}
+		\Action{act4}{$BOX\_SR \bcmeq{} off$}{true}{}
+		\Action{act5}{$BOX\_PHY \bcmeq{} FALSE$}{true}{}
+	}
+}
+\EVT{PICK\_ITEM}{true}{ordinary}{PICK\_ITEM}{}{
+	\ANY{
+		\Param{free\_arm}{false}{}
+		\Param{item\_weight}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$free\_arm \in{} 1\upto{}n\_arms$}{false}{}
+		\Guard{grd2}{false}{$arms(free\_arm) = 0$}{false}{}
+		\Guard{grd3}{false}{$item\_weight \in{} 1\upto{}max\_item\_weight$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$arms(free\_arm) \bcmeq{} item\_weight$}{false}{}
+	}
+}
+\EVT{PLACE\_ITEM}{false}{convergent}{PLACE\_ITEM}{}{
+	\ANY{
+		\Param{arm}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$arm \in{} 1\upto{}n\_arms$}{true}{}
+		\Guard{grd2}{false}{$arms(arm) \neq{} 0$}{true}{}
+		\Guard{grd3}{false}{$box\_weight + arms(arm) \leq{} box\_capacity$}{true}{}
+		\Guard{grd4}{false}{$BOX\_SR = on$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$arms(arm) \bcmeq{} 0$}{true}{}
+		\Action{act2}{$box\_weight \bcmeq{} box\_weight + arms(arm)$}{true}{}
+	}
+}
+\EVT{BOX\_ARR\_PHY}{false}{ordinary}{}{\\A new box physicaly arrives}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$BOX\_SR = off$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$BOX\_PHY \bcmeq{} TRUE$}{true}{}
+	}
+}
+\EVT{BOX\_ARR}{false}{ordinary}{BOX\_ARR}{\\The sensor (physically) notices the presence of a box}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$BOX\_SR = off$}{true}{}
+		\Guard{grd2}{false}{$BOX\_PHY = TRUE$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$box\_capacity \bcmin{} min\_box\_capacity\upto{}max\_box\_capacity$}{true}{\\The idea is that some kind of computer vision sensor both notices the presence of a new box and measures its dimensions}
+		\Action{act2}{$BOX\_SR \bcmeq{} on$}{true}{}
+	}
+}
+\EVT{BOX\_DEP}{false}{anticipated}{BOX\_DEP}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$\lnot{} (\exists{} arm \qdot{} arm \in{} 1\upto{}n\_arms \land{} arms(arm) \neq{} 0 \land{} arms(arm) + box\_weight \leq{} box\_capacity)$}{true}{}
+		\Guard{grd2}{false}{$BOX\_SR = on$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$box\_weight \bcmeq{} 0$}{true}{}
+		\Action{act2}{$box\_capacity \bcmeq{} 0$}{true}{}
+		\Action{act3}{$BOX\_SR \bcmeq{} off$}{true}{}
+		\Action{act4}{$BOX\_PHY \bcmeq{} FALSE$}{true}{}
+	}
+}
+}
+\END
+\MultiHeader{MACHINE}{M2}
+\MACHINE{M2}{M1}{C0,Sensor}{\\Robot arms synchronization when placing items in the box}
+\VARIABLES{
+	\Variable{arms}{As in previous refinement}
+	\Variable{box\_capacity}{As in previous refinement}
+	\Variable{box\_weight}{As in previous refinement}
+	\Variable{BOX\_SR}{As in previous refinement}
+	\Variable{BOX\_PHY}{As in previous refinement}
+	\Variable{BUSY\_SR}{Arm that is busy placing an item from the POV of the controller (0 if none)}
+	\Variable{BUSY\_PHY}{The busy arm is physically moving yet}
+}
+\INVARIANTS{
+	\Invariant{inv1}{false}{$BUSY\_SR \in{} 0\upto{}n\_arms$}{}
+	\Invariant{inv2}{false}{$BUSY\_PHY = TRUE \limp{} (BUSY\_SR \neq{} 0 \land{} arms(BUSY\_SR) \neq{} 0 \land{} box\_weight + arms(BUSY\_SR) \leq{} box\_capacity \land{} box\_capacity \neq{} 0)$}{}
+	\Invariant{inv3}{false}{$BUSY\_SR \neq{} 0 \limp{} BOX\_SR = on$}{}
+	\Invariant{help}{true}{$\\((\exists{} free\_arm, item\_weight \qdot{} free\_arm \in{} 1\upto{}n\_arms \land{} arms(free\_arm) = 0 \land{} item\_weight \in{} 1\upto{}max\_item\_weight) \lor{}\\(\exists{} arm \qdot{} arm \in{} 1\upto{}n\_arms \land{} arms(arm) \neq{} 0 \land{} box\_capacity \neq{} 0 \land{} box\_weight + arms(arm) \leq{} box\_capacity \land{} BOX\_SR = on) \lor{}\\BOX\_SR = off \lor{}\\(BOX\_SR = off \land{} BOX\_PHY = TRUE) \lor{}\\(\lnot{} (\exists{} arm \qdot{} arm \in{} 1\upto{}n\_arms \land{} arms(arm) \neq{} 0 \land{} arms(arm) + box\_weight \leq{} box\_capacity) \land{} BOX\_SR = on))\\\limp{}\\((\exists{} free\_arm, item\_weight \qdot{} free\_arm \in{} 1\upto{}n\_arms \land{} arms(free\_arm) = 0 \land{} item\_weight \in{} 1\upto{}max\_item\_weight) \lor{}\\(\exists{} arm \qdot{} arm \in{} 1\upto{}n\_arms \land{} arms(arm) \neq{} 0 \land{} box\_weight + arms(arm) \leq{} box\_capacity \land{} BOX\_SR = on) \lor{}\\(\exists{} arm \qdot{} arm \in{} 1\upto{}n\_arms \land{} arms(arm) \neq{} 0 \land{} box\_weight + arms(arm) \leq{} box\_capacity \land{} BOX\_SR = on \land{} arm = BUSY\_SR) \lor{}\\BUSY\_PHY = FALSE \lor{}\\BOX\_SR = off \lor{}\\(BOX\_SR = off \land{} BOX\_PHY = TRUE))$}{\\This invariant is unnecessary, but eases the task of proving inv4}
+	\Invariant{inv4}{true}{$\\((\exists{} free\_arm, item\_weight \qdot{} free\_arm \in{} 1\upto{}n\_arms \land{} arms(free\_arm) = 0 \land{} item\_weight \in{} 1\upto{}max\_item\_weight) \lor{}\\(\exists{} arm \qdot{} arm \in{} 1\upto{}n\_arms \land{} arms(arm) \neq{} 0 \land{} box\_capacity \neq{} 0 \land{} box\_weight + arms(arm) \leq{} box\_capacity \land{} BOX\_SR = on) \lor{}\\BOX\_SR = off \lor{}\\(BOX\_SR = off \land{} BOX\_PHY = TRUE) \lor{}\\(\lnot{} (\exists{} arm \qdot{} arm \in{} 1\upto{}n\_arms \land{} arms(arm) \neq{} 0 \land{} arms(arm) + box\_weight \leq{} box\_capacity) \land{} BOX\_SR = on))\\\limp{}\\((\exists{} free\_arm, item\_weight \qdot{} free\_arm \in{} 1\upto{}n\_arms \land{} arms(free\_arm) = 0 \land{} item\_weight \in{} 1\upto{}max\_item\_weight) \lor{}\\(\exists{} arm \qdot{} arm \in{} 1\upto{}n\_arms \land{} arms(arm) \neq{} 0 \land{} box\_weight + arms(arm) \leq{} box\_capacity \land{} BOX\_SR = on) \lor{}\\(\exists{} arm \qdot{} arm \in{} 1\upto{}n\_arms \land{} arms(arm) \neq{} 0 \land{} box\_weight + arms(arm) \leq{} box\_capacity \land{} BOX\_SR = on \land{} arm = BUSY\_SR) \lor{}\\BUSY\_PHY = FALSE \lor{}\\BOX\_SR = off \lor{}\\(BOX\_SR = off \land{} BOX\_PHY = TRUE) \lor{}\\(\lnot{} (\exists{} arm \qdot{} arm \in{} 1\upto{}n\_arms \land{} arms(arm) \neq{} 0 \land{} arms(arm) + box\_weight \leq{} box\_capacity) \land{} BOX\_SR = on \land{} BUSY\_SR = 0))$}{\\Deadlock freedom}
+}
+\VARIANT{
+	\Variant{$box\_capacity - box\_weight$}{}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$arms \bcmeq{} 1\upto{}n\_arms \cprod{} \{0\}$}{true}{}
+		\Action{act2}{$box\_capacity \bcmeq{} 0$}{true}{}
+		\Action{act3}{$box\_weight \bcmeq{} 0$}{true}{}
+		\Action{act4}{$BOX\_SR \bcmeq{} off$}{true}{}
+		\Action{act5}{$BOX\_PHY \bcmeq{} FALSE$}{true}{}
+		\Action{act6}{$BUSY\_SR \bcmeq{} 0$}{true}{}
+		\Action{act7}{$BUSY\_PHY \bcmeq{} FALSE$}{true}{}
+	}
+}
+\EVT{PICK\_ITEM}{false}{ordinary}{PICK\_ITEM}{}{
+	\ANY{
+		\Param{free\_arm}{true}{}
+		\Param{item\_weight}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$free\_arm \in{} 1\upto{}n\_arms$}{true}{}
+		\Guard{grd2}{false}{$arms(free\_arm) = 0$}{true}{}
+		\Guard{grd3}{false}{$item\_weight \in{} 1\upto{}max\_item\_weight$}{true}{}
+		\Guard{grd4}{false}{$free\_arm \neq{} BUSY\_SR$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$arms(free\_arm) \bcmeq{} item\_weight$}{true}{}
+	}
+}
+\EVT{CHOOSE\_ARM}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{arm}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$arm \in{} 1\upto{}n\_arms$}{true}{}
+		\Guard{grd2}{false}{$arms(arm) \neq{} 0$}{true}{}
+		\Guard{grd3}{false}{$box\_weight + arms(arm) \leq{} box\_capacity$}{true}{}
+		\Guard{grd4}{false}{$BOX\_SR = on$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$BUSY\_SR \bcmeq{} arm$}{true}{}
+		\Action{act2}{$BUSY\_PHY \bcmeq{} TRUE$}{true}{}
+	}
+}
+\EVT{PLACE\_ITEM}{false}{convergent}{PLACE\_ITEM}{}{
+	\ANY{
+		\Param{arm}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$arm \in{} 1\upto{}n\_arms$}{true}{}
+		\Guard{grd2}{false}{$arms(arm) \neq{} 0$}{true}{}
+		\Guard{grd3}{false}{$box\_weight + arms(arm) \leq{} box\_capacity$}{true}{}
+		\Guard{grd4}{false}{$BOX\_SR = on$}{true}{}
+		\Guard{grd5}{false}{$arm = BUSY\_SR$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$arms(arm) \bcmeq{} 0$}{true}{}
+		\Action{act2}{$box\_weight \bcmeq{} box\_weight + arms(arm)$}{true}{}
+		\Action{act3}{$BUSY\_PHY \bcmeq{} FALSE$}{true}{}
+	}
+}
+\EVT{STOP\_ARM}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$BUSY\_PHY = FALSE$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$BUSY\_SR \bcmeq{} 0$}{true}{}
+	}
+}
+\EVT{BOX\_ARR\_PHY}{true}{ordinary}{BOX\_ARR\_PHY}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$BOX\_SR = off$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$BOX\_PHY \bcmeq{} TRUE$}{false}{}
+	}
+}
+\EVT{BOX\_ARR}{true}{ordinary}{BOX\_ARR}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$BOX\_SR = off$}{false}{}
+		\Guard{grd2}{false}{$BOX\_PHY = TRUE$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$box\_capacity \bcmin{} min\_box\_capacity\upto{}max\_box\_capacity$}{false}{\\The idea is that some kind of computer vision sensor both notices the presence of a new box and measures its dimensions}
+		\Action{act2}{$BOX\_SR \bcmeq{} on$}{false}{}
+	}
+}
+\EVT{BOX\_DEP}{false}{anticipated}{BOX\_DEP}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$\lnot{} (\exists{} arm \qdot{} arm \in{} 1\upto{}n\_arms \land{} arms(arm) \neq{} 0 \land{} arms(arm) + box\_weight \leq{} box\_capacity)$}{true}{}
+		\Guard{grd2}{false}{$BOX\_SR = on$}{true}{}
+		\Guard{grd3}{false}{$BUSY\_SR = 0$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$box\_weight \bcmeq{} 0$}{true}{}
+		\Action{act2}{$box\_capacity \bcmeq{} 0$}{true}{}
+		\Action{act3}{$BOX\_SR \bcmeq{} off$}{true}{}
+		\Action{act4}{$BOX\_PHY \bcmeq{} FALSE$}{true}{}
+	}
+}
+}
+\END
+\end{document}
