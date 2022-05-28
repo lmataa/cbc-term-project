@@ -1,0 +1,250 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{beamer}
+
+%-------------------------------------------------------------------------------
+%    PACKAGES AND THEMES
+%-------------------------------------------------------------------------------
+\input{config}
+
+%-------------------------------------------------------------------------------
+%    TITLE PAGE
+%-------------------------------------------------------------------------------
+% Your institution as it will appear on the bottom of 
+% every slide, may be shorthand to save space
+\title[Short title]{Term Project: Robot Factory}
+\author{Victor Carrillo, Joseba Celaya, Luis Mata}
+% Your institution as it will appear on the bottom of 
+% every slide, may be shorthand to save space
+% Your institution for the title page
+\institute[UCM/UAM/UPM]{
+
+\medskip
+}
+\date{\today} 
+%-------------------------------------------------------------------------------
+%    BEGIN DOCUMENT
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Title page
+\begin{frame}
+\titlepage 
+\end{frame}
+
+% Overview frame
+\begin{frame}
+\frametitle{Overview} 
+\tableofcontents 
+\end{frame}
+
+%-------------------------------------------------------------------------------
+%    PRESENTATION SLIDES
+%-------------------------------------------------------------------------------
+
+\section{Introduction}
+
+\begin{frame}[containsverbatim]{Intro}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includegraphics[scale=0.2]{figures/drawing.jpg}
+\end{figure}
+\end{frame}
+
+
+\section{Model Variables and Events}
+
+% Model 0 Sensors
+\begin{frame}[containsverbatim]{Model 0 Variables}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=1]{figures/map0.svg}
+\end{figure}
+\end{frame}
+
+
+% Model 0
+\begin{frame}[containsverbatim]{Model 0 Events}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=1]{figures/model0.svg}
+\end{figure}
+\end{frame}
+
+
+% Model 1 Sensors
+\begin{frame}[containsverbatim]{Model 1 Variables}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.12]{figures/map1.svg}
+\end{figure}
+\end{frame}
+
+
+% Model 1
+\begin{frame}[containsverbatim]{Model 1 Events}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=1]{figures/model1.svg}
+\end{figure}
+\end{frame}
+
+
+% Model 2 Sensors
+\begin{frame}[containsverbatim]{Model 2 Variables}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.12]{figures/map2.svg}
+\end{figure}
+\end{frame}
+
+
+% Model 2
+\begin{frame}[containsverbatim]{Model 2 Events}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.08]{figures/model2.svg}
+\end{figure}
+\end{frame}
+
+
+% Model 3 Sensors
+\begin{frame}[containsverbatim]{Model 2B Variables}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.12]{figures/map3.svg}
+\end{figure}
+\end{frame}
+
+
+% Model 3
+\begin{frame}[containsverbatim]{Model 2B Events}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.8]{figures/model3.svg}
+\end{figure}
+\end{frame}
+
+
+\section{Model Checking}
+
+% Animation 0
+\begin{frame}[containsverbatim]{Model Checking: 0 INITIALISATION}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.08]{figures/models-animation0.svg}
+\end{figure}
+\end{frame}
+
+
+% Animation 1
+\begin{frame}[containsverbatim]{Model Checking: 1 PICK\_ITEM}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.08]{figures/models-animation1.svg}
+\end{figure}
+\end{frame}
+
+
+% Animation 2
+\begin{frame}[containsverbatim]{Model Checking: 2 BOX\_ARR\_PHY}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.08]{figures/models-animation2.svg}
+\end{figure}
+\end{frame}
+
+
+% Animation 3
+\begin{frame}[containsverbatim]{Model Checking: 3 BOX\_ARR}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.8]{figures/models-animation3.svg}
+\end{figure}
+\end{frame}
+
+
+% Animation 4
+\begin{frame}[containsverbatim]{Model Checking: 4 SIGNAL\_ARM}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.08]{figures/models-animation4.svg}
+\end{figure}
+\end{frame}
+
+
+% Animation 5
+\begin{frame}[containsverbatim]{Model Checking: 5 MOVE\_ARM\_PHY}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.08]{figures/models-animation5.svg}
+\end{figure}
+\end{frame}
+
+
+% Animation 6
+\begin{frame}[containsverbatim]{Model Checking: 6 ARM\_BOX\_ARR}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.08]{figures/models-animation6.svg}
+\end{figure}
+\end{frame}
+
+
+% Animation 7
+\begin{frame}[containsverbatim]{Model Checking: 7 PLACE\_ITEM}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.08]{figures/models-animation7.svg}
+\end{figure}
+\end{frame}
+
+
+% Animation 8
+\begin{frame}[containsverbatim]{Model Checking: 8 RESTORE\_ARM\_PHY}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.08]{figures/models-animation8.svg}
+\end{figure}
+\end{frame}
+
+
+% Animation 9
+\begin{frame}[containsverbatim]{Model Checking: 9 RESTORE\_ARM\_CTRL}
+\begin{figure}[htbp]
+  \centering
+  %%\def\svgscale{0.5}
+  \includesvg[scale=0.08]{figures/models-animation9.svg}
+\end{figure}
+\end{frame}
+
+
+\end{document}
